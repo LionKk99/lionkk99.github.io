@@ -1,153 +1,102 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kaleido Cover 3D Demo</title>
-    <style>
-      :root {
-        --bg: #0b0e14;
-        --fg: #e8eefc;
-        --muted: rgba(232, 238, 252, 0.7);
-        --card: rgba(255, 255, 255, 0.06);
-        --border: rgba(255, 255, 255, 0.12);
-      }
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kaleido: Interactive 3D Cover Demo</title>
+  <link rel="icon" type="image/x-icon" sizes="16x16" href="../../favicon16.ico">
+  <link rel="icon" type="image/x-icon" sizes="32x32" href="../../favicon32.ico">
+  <link rel="stylesheet" type="text/css" media="all" href="../../assets/stylesheets/main_free.css" />
+  <link rel="stylesheet" type="text/css" media="all" href="../../clarity/clarity.css" />
+  <link rel="stylesheet" type="text/css" media="all" href="../../assets/stylesheets/home.css" />
+  <link rel="stylesheet" type="text/css" media="all" href="../../assets/stylesheets/project-page.css" />
+  <link href="../../assets/fontawesome-free-7.2.0-web/css/all.min.css" rel="stylesheet">
+  <script defer src="../../assets/scripts/nav-indicator.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.9.4/lib/p5.min.js"></script>
+</head>
+<body>
+  <nav class="home-nav">
+    <ul class="home-nav-links">
+      <li><a href="../../index.html">Home</a></li>
+      <li><a href="../../projects.html" class="active">Projects</a></li>
+      <li><a href="../../resume.html">Resume</a></li>
+      <li><a href="../../about.html">About</a></li>
+    </ul>
+    <div class="home-nav-social">
+      <a href="https://twitter.com" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="mailto:your@email.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      <a href="https://linkedin.com" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+    </div>
+  </nav>
 
-      * {
-        box-sizing: border-box;
-      }
-
-      html,
-      body {
-        height: 100%;
-      }
-
-      body {
-        margin: 0;
-        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
-          "Apple Color Emoji", "Segoe UI Emoji";
-        background: radial-gradient(1200px 900px at 20% 10%, rgba(72, 95, 170, 0.55), transparent 55%),
-          radial-gradient(900px 800px at 80% 60%, rgba(178, 94, 140, 0.4), transparent 60%),
-          var(--bg);
-        color: var(--fg);
-      }
-
-      .wrap {
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 28px 18px 60px;
-      }
-
-      header {
-        display: flex;
-        align-items: baseline;
-        justify-content: space-between;
-        gap: 18px;
-        margin-bottom: 14px;
-      }
-
-      h1 {
-        font-size: 20px;
-        margin: 0;
-        font-weight: 650;
-        letter-spacing: 0.2px;
-      }
-
-      .hint {
-        color: var(--muted);
-        font-size: 13px;
-        line-height: 1.4;
-        margin: 0;
-      }
-
-      .card {
-        background: var(--card);
-        border: 1px solid var(--border);
-        border-radius: 14px;
-        overflow: hidden;
-        backdrop-filter: blur(10px);
-      }
-
-      .blog-cover {
-        position: relative;
-        width: 100%;
-      }
-
-      /* Desktop: p5.js canvas */
-      #desktop-cover {
-        display: none;
-      }
-
-      /* Mobile fallback: 2-layer image to match your existing structure */
-      #mobile-cover {
-        display: block;
-        aspect-ratio: 3 / 4;
-      }
-
-      #mobile-cover img {
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transform: scale(1.02);
-      }
-
-      #mobile-cover img.background {
-        filter: blur(10px) saturate(1.05);
-        opacity: 0.65;
-      }
-
-      #mobile-cover img.foreground {
-        filter: contrast(1.05) saturate(1.02);
-        opacity: 1;
-      }
-
-      @media (min-width: 1200px) {
-        #desktop-cover {
-          display: block;
-        }
-        #mobile-cover {
-          display: none;
-        }
-      }
-
-      .footer {
-        margin-top: 12px;
-        color: var(--muted);
-        font-size: 13px;
-      }
-
-      .footer code {
-        color: rgba(232, 238, 252, 0.9);
-      }
-    </style>
-
-    <!-- p5.js (global mode) -->
-    <script src="https://cdn.jsdelivr.net/npm/p5@1.9.4/lib/p5.min.js"></script>
-  </head>
-  <body>
-    <div class="wrap">
-      <header>
-        <h1>Kaleido 3D Cover（p5.js / WEBGL）</h1>
-        <p class="hint">桌面端可拖拽旋转；小屏自动降级为静态图片。</p>
-      </header>
-
-      <section class="card">
-        <div class="blog-cover" id="desktop-cover">
-          <script src="cover/kaleido_cover.js"></script>
+  <div class="container blog" id="first-content" style="background-color: #E0E4E6;">
+    <div class="blog-title">
+      <div class="blog-intro">
+        <div>
+          <h1 class="title">Kaleido: Interactive 3D Cover Demo</h1>
+          <p class="author">Author Name (Placeholder)</p>
+          <p class="author" style="padding-top: 0;">Organization / Affiliation (Placeholder)</p>
+          <p class="abstract">
+            This page demonstrates an interactive image-driven 3D cover effect rendered with p5.js (WEBGL).
+            Cube geometry and color are generated from a source image, while motion is animated by periodic wave
+            transforms. The text here is placeholder content and can be replaced with your project description.
+          </p>
+          <div class="info">
+            <div>
+              <a href="#" class="button icon" style="background-color: rgba(255, 255, 255, 0.2);">Paper <i class="fa-regular fa-file-lines"></i></a> &nbsp;&nbsp;
+              <a href="#" class="button icon" style="background-color: rgba(255, 255, 255, 0.2);">Code <i class="fa-solid fa-code"></i></a> &nbsp;&nbsp;
+              <a href="#" class="button icon" style="background-color: rgba(255, 255, 255, 0.2);">Project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
         </div>
+      </div>
 
-        <div class="blog-cover" id="mobile-cover">
-          <img class="foreground" src="/assets/figures/kaleido.png" alt="Kaleido" />
-          <img class="background" src="/assets/figures/kaleido.png" alt="Kaleido" />
-        </div>
-      </section>
+      <div class="blog-cover project-portrait" id="desktop-cover">
+        <script src="cover/kaleido_cover.js"></script>
+      </div>
 
-      <div class="footer">
-        图片来源：<code>/assets/figures/kaleido.png</code>（如需替换，改 `projects/kaleido/cover/kaleido_cover.js` 的 <code>IMG_URL</code>）。
+      <div class="blog-cover project-portrait" id="mobile-cover">
+        <img class="foreground" src="../../assets/figures/kaleido.png" alt="Kaleido teaser">
+        <img class="background" src="../../assets/figures/kaleido.png" alt="">
       </div>
     </div>
-  </body>
+  </div>
+
+  <div class="container blog main first" id="blog-main">
+    <h1>Introduction</h1>
+    <p class="text">
+      Placeholder text: describe the motivation of this project, the visual style you want, and how the
+      animation responds to user interaction or input images.
+    </p>
+    <p class="text">
+      Placeholder text: add technical details such as rendering pipeline, performance trade-offs, and future
+      improvements (for example, runtime color modes and configurable presets).
+    </p>
+  </div>
+
+  <footer class="home-footer">
+    <a href="https://github.com/lorenmt/clarity-template">&lt;/&gt;</a> with ❤️ by Shikun
+  </footer>
+
+  <style>
+    #desktop-cover {
+      display: none;
+    }
+
+    #mobile-cover {
+      display: block;
+    }
+
+    @media (min-width: 1200px) {
+      #desktop-cover {
+        display: block;
+      }
+
+      #mobile-cover {
+        display: none;
+      }
+    }
+  </style>
+</body>
 </html>
 
