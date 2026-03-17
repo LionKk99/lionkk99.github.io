@@ -1,0 +1,62 @@
+/* About page: Clarity-like sectioned layout */
+
+.about-page {
+  padding-top: 6.5rem; /* keep clear of absolute nav */
+  padding-bottom: 2.5rem;
+}
+
+.about-title {
+  margin-bottom: 1.5rem;
+}
+
+.about-sections {
+  display: grid;
+  gap: 2rem;
+  max-width: 980px;
+}
+
+.about-section {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 2rem;
+  padding: 1.6rem 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.about-section:first-child {
+  border-top: 0;
+  padding-top: 0.5rem;
+}
+
+.about-section .about-label {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #666667;
+  font-size: 0.8em;
+  white-space: nowrap;
+}
+
+.about-section .about-content {
+  color: #353535;
+}
+
+.about-section .about-content p.text {
+  margin-top: 0.5rem;
+}
+
+.about-section .about-content p.text:first-child {
+  margin-top: 0;
+}
+
+@media screen and (max-width: 769px) {
+  .about-section {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+  .about-section .about-label {
+    white-space: normal;
+  }
+}
+

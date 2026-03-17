@@ -114,6 +114,55 @@
   color: #353535;
 }
 
+.pub-title-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.pub-title-row .pub-title {
+  font-weight: 600;
+}
+
+/* Superscript-like links at title top-right */
+.pub-title-row .pub-links {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 0.72em;
+  color: #666667;
+  white-space: nowrap;
+  position: relative;
+  top: -0.35em;
+}
+
+.pub-title-row .pub-links a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.pub-title-row .pub-links a:hover {
+  color: #353535;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.pub-bibtex {
+  margin-top: 0.4rem;
+  font-size: 0.95em;
+}
+
+.pub-bibtex summary {
+  cursor: pointer;
+  color: #666667;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9em;
+}
+
+.pub-bibtex pre {
+  margin-top: 0.6rem;
+}
+
 .pub-cite b {
   font-weight: 600;
 }
