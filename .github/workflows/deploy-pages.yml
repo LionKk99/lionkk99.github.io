@@ -27,6 +27,7 @@ jobs:
 
       - name: Check required files
         run: |
+          test -f index.html || (echo "Missing index.html" && exit 1)
           test -f clarity.html || (echo "Missing clarity.html" && exit 1)
           test -f minimal.html || (echo "Missing minimal.html" && exit 1)
           test -d assets || (echo "Missing assets/" && exit 1)
