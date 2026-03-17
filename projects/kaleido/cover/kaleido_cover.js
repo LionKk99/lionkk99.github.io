@@ -1,18 +1,27 @@
 // Desktop-only: prevent WEBGL workload on small screens.
+// Interface note:
+// - This script depends on p5.js global lifecycle hooks (preload/setup/draw).
+// - It expects a container element with id="desktop-cover".
+// - Main external input is IMG_URL (source image for color sampling).
 const isDesktop = window.innerWidth >= 1200;
 
-// Update this if you want to use another image.
+// Input: replace this path to generate a different color/style baseline.
 const IMG_URL = "/assets/figures/kaleido.png";
 
 if (isDesktop) {
   let img;
   let rotationX = 0;
   let rotationY = 0;
+  // Drag rotation clamp to avoid excessive view tilting.
   const rotationLimit = 10;
+  // Core quality/performance parameter:
+  // smaller density => more cubes, richer details, heavier GPU/CPU load.
   const density = 14;
   const cubeSizeMultiplier = 1.75;
+  // Neighborhood variance is used to decide adaptive subdivision.
   const neighborhoodRadius = 1;
   const maxVariance = 2000;
+  // Wave-motion controls (spatial frequency / temporal speed / max angle).
   const waveFrequency = 0.5;
   const waveSpeed = 1.7;
   const maxRotation = 90;
@@ -21,10 +30,12 @@ if (isDesktop) {
   let cubeData = [];
 
   window.preload = function () {
+    // p5 preload hook: ensure image is ready before setup runs.
     img = loadImage(IMG_URL);
   };
 
   window.setup = function () {
+    // p5 setup hook: create WEBGL canvas inside the target container.
     const container = document.getElementById("desktop-cover");
     const containerWidth = container.offsetWidth || 900;
     const containerHeight = (containerWidth / 3) * 4;
@@ -42,6 +53,9 @@ if (isDesktop) {
   };
 
   function precomputeCubeData() {
+    // Performance key:
+    // all expensive image-analysis work is done once (or on resize),
+    // draw() then only applies animation transforms per frame.
     cubeData = [];
     for (let x = 0; x < img.width; x += density) {
       for (let y = 0; y < img.height; y += density) {
@@ -52,6 +66,7 @@ if (isDesktop) {
         const subdivisionThreshold = 0.6;
 
         if (easedSizeFactor > subdivisionThreshold) {
+          // Low-variance region: one larger cube.
           const cubeSize = map(easedSizeFactor, 0, 1, 0, density * cubeSizeMultiplier);
           const sampleX = constrain(x + density / 2, 0, img.width - 1);
           const sampleY = constrain(y + density / 2, 0, img.height - 1);
@@ -64,6 +79,7 @@ if (isDesktop) {
             color: pixelColor,
           });
         } else {
+          // High-variance region: split into 4 smaller cubes for more detail.
           const subDensity = density / 2;
           for (let i = 0; i < 2; i++) {
             for (let j = 0; j < 2; j++) {
@@ -90,6 +106,7 @@ if (isDesktop) {
   }
 
   window.draw = function () {
+    // p5 draw hook: executed every frame.
     clear();
     scale(0.92);
     rotateX(rotationX);
@@ -98,6 +115,7 @@ if (isDesktop) {
     translate(-img.width / 2, -img.height / 2);
 
     for (const cube of cubeData) {
+      // Per-frame dynamic input = frameCount; creates traveling wave rotation.
       const angle = sin(cube.x * waveFrequency + cube.y * waveFrequency + frameCount * waveSpeed) * maxRotation;
 
       push();
@@ -111,6 +129,7 @@ if (isDesktop) {
   };
 
   window.windowResized = function () {
+    // Keep canvas and pixel cache in sync with responsive container size.
     const container = document.getElementById("desktop-cover");
     if (!container) return;
 
@@ -124,6 +143,7 @@ if (isDesktop) {
   };
 
   window.mouseDragged = function () {
+    // Interactive input: drag to rotate view within rotationLimit.
     if (mouseX >= 0 && mouseX <= width && mouseY >= 0 && mouseY <= height) {
       rotationY += (mouseX - pmouseX) * 0.5;
       rotationX -= (mouseY - pmouseY) * 0.5;
@@ -134,6 +154,7 @@ if (isDesktop) {
   };
 
   function getColorFromPixels(x, y) {
+    // Convert sampled pixel into p5 color used by fill().
     const intX = floor(x);
     const intY = floor(y);
     const i = (intY * img.width + intX) * 4;
@@ -141,6 +162,8 @@ if (isDesktop) {
   }
 
   function calculateBrightnessVariance(centerX, centerY, radius) {
+    // Local brightness variance (texture complexity proxy):
+    // higher variance => finer subdivision.
     if (radius === 0) return 0;
     let brightnesses = [];
     let sumBrightness = 0;
