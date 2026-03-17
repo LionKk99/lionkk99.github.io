@@ -51,13 +51,14 @@
         </div>
       </div>
 
-      <div class="blog-cover project-portrait" id="desktop-cover">
-        <script src="cover/kaleido_cover.js"></script>
-      </div>
-
-      <div class="blog-cover project-portrait" id="mobile-cover">
-        <img class="foreground" src="../../assets/figures/kaleido.png" alt="Kaleido teaser">
-        <img class="background" src="../../assets/figures/kaleido.png" alt="">
+      <div class="blog-cover project-portrait" id="cover-shell">
+        <div id="desktop-cover">
+          <script src="cover/kaleido_cover.js"></script>
+        </div>
+        <div id="mobile-cover">
+          <img class="foreground" src="../../assets/figures/kaleido.png" alt="Kaleido teaser">
+          <img class="background" src="../../assets/figures/kaleido.png" alt="">
+        </div>
       </div>
     </div>
   </div>
@@ -79,11 +80,20 @@
   </footer>
 
   <style>
+    #cover-shell {
+      position: relative;
+      overflow: hidden;
+    }
+
     #desktop-cover {
       display: none;
+      width: 100%;
+      height: 100%;
     }
 
     #mobile-cover {
+      position: absolute;
+      inset: 0;
       display: block;
     }
 
