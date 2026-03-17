@@ -1,28 +1,93 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @font-face {
-  font-family: "Charter";
+  font-family: "Tiempos Text";
+  src: url("../fonts/Tiempos/TiemposText-Bold.eot");
+  src: url("../fonts/Tiempos/TiemposText-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Tiempos/TiemposText-Bold.woff") format("woff"), url("../fonts/Tiempos/TiemposText-Bold.ttf") format("truetype");
+  font-weight: 700;
   font-style: normal;
-  font-weight: normal;
-  src: url("../fonts/Charter/charter_regular.woff2") format("woff2");
 }
 @font-face {
-  font-family: "Charter";
+  font-family: "Tiempos Text";
+  src: url("../fonts/Tiempos/TiemposText-BoldItalic.eot");
+  src: url("../fonts/Tiempos/TiemposText-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Tiempos/TiemposText-BoldItalic.woff") format("woff"), url("../fonts/Tiempos/TiemposText-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
   font-style: italic;
-  font-weight: normal;
-  src: url("../fonts/Charter/charter_italic.woff2") format("woff2");
 }
 @font-face {
-  font-family: "Charter";
+  font-family: "Tiempos Text";
+  src: url("../fonts/Tiempos/TiemposText-Semibold.eot");
+  src: url("../fonts/Tiempos/TiemposText-Semibold.eot?#iefix") format("embedded-opentype"), url("../fonts/Tiempos/TiemposText-Semibold.woff") format("woff"), url("../fonts/Tiempos/TiemposText-Semibold.ttf") format("truetype");
+  font-weight: 600;
   font-style: normal;
-  font-weight: bold;
-  src: url("../fonts/Charter/charter_bold.woff2") format("woff2");
 }
 @font-face {
-  font-family: "Charter";
+  font-family: "Tiempos Text";
+  src: url("../fonts/Tiempos/TiemposText-SemiboldItalic.eot");
+  src: url("../fonts/Tiempos/TiemposText-SemiboldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Tiempos/TiemposText-SemiboldItalic.woff") format("woff"), url("../fonts/Tiempos/TiemposText-SemiboldItalic.ttf") format("truetype");
+  font-weight: 600;
   font-style: italic;
-  font-weight: bold;
-  src: url("../fonts/Charter/charter_bold_italic.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Tiempos Text";
+  src: url("../fonts/Tiempos/TiemposText-Regular.eot");
+  src: url("../fonts/Tiempos/TiemposText-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Tiempos/TiemposText-Regular.woff") format("woff"), url("../fonts/Tiempos/TiemposText-Regular.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Tiempos Text";
+  src: url("../fonts/Tiempos/TiemposText-Italic.eot");
+  src: url("../fonts/Tiempos/TiemposText-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/Tiempos/TiemposText-Italic.woff") format("woff"), url("../fonts/Tiempos/TiemposText-Italic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Athletics";
+  src: url("../fonts/Athletics/Athletics-Bold.eot");
+  src: url("../fonts/Athletics/Athletics-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Athletics/Athletics-Bold.woff2") format("woff2"), url("../fonts/Athletics/Athletics-Bold.woff") format("woff"), url("../fonts/Athletics/Athletics-Bold.ttf") format("truetype"), url("../fonts/Athletics/Athletics-Bold.svg#Athletics-Bold") format("svg");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Athletics";
+  src: url("../fonts/Athletics/Athletics-BoldItalic.eot");
+  src: url("../fonts/Athletics/Athletics-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Athletics/Athletics-BoldItalic.woff2") format("woff2"), url("../fonts/Athletics/Athletics-BoldItalic.woff") format("woff"), url("../fonts/Athletics/Athletics-BoldItalic.ttf") format("truetype"), url("../fonts/Athletics/Athletics-BoldItalic.svg#Athletics-BoldItalic") format("svg");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Athletics";
+  src: url("../fonts/Athletics/Athletics-Medium.eot");
+  src: url("../fonts/Athletics/Athletics-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Athletics/Athletics-Medium.woff2") format("woff2"), url("../fonts/Athletics/Athletics-Medium.woff") format("woff"), url("../fonts/Athletics/Athletics-Medium.ttf") format("truetype"), url("../fonts/Athletics/Athletics-Medium.svg#Athletics-Medium") format("svg");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Athletics";
+  src: url("../fonts/Athletics/Athletics-MediumItalic.eot");
+  src: url("../fonts/Athletics/Athletics-MediumItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Athletics/Athletics-MediumItalic.woff2") format("woff2"), url("../fonts/Athletics/Athletics-MediumItalic.woff") format("woff"), url("../fonts/Athletics/Athletics-MediumItalic.ttf") format("truetype"), url("../fonts/Athletics/Athletics-MediumItalic.svg#Athletics-MediumItalic") format("svg");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Athletics";
+  src: url("../fonts/Athletics/Athletics-Italic.eot");
+  src: url("../fonts/Athletics/Athletics-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/Athletics/Athletics-Italic.woff2") format("woff2"), url("../fonts/Athletics/Athletics-Italic.woff") format("woff"), url("../fonts/Athletics/Athletics-Italic.ttf") format("truetype"), url("../fonts/Athletics/Athletics-Italic.svg#Athletics-Italic") format("svg");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Athletics";
+  src: url("../fonts/Athletics/Athletics-Regular.eot");
+  src: url("../fonts/Athletics/Athletics-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Athletics/Athletics-Regular.woff2") format("woff2"), url("../fonts/Athletics/Athletics-Regular.woff") format("woff"), url("../fonts/Athletics/Athletics-Regular.ttf") format("truetype"), url("../fonts/Athletics/Athletics-Regular.svg#Athletics-Regular") format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
 }
 a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, p, pre, q, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
   margin: 0;
@@ -49,7 +114,7 @@ h1, h2, h3, h4, h5, h6, p, a, code, pre, ol, ul, li {
   line-height: 1.6;
   font-weight: 300;
   font-size: 18px;
-  font-family: "Poppins", serif;
+  font-family: "Athletics", serif;
 }
 
 a {
@@ -120,11 +185,6 @@ svg {
   flex: 1;
 }
 
-::-moz-selection {
-  color: white;
-  background: #353535;
-}
-
 ::selection {
   color: white;
   background: #353535;
@@ -142,7 +202,7 @@ svg {
   }
   h1.title {
     font-weight: 500;
-    font-size: 26px;
+    font-size: 30px;
   }
   h2 {
     line-height: 1.2;
@@ -174,7 +234,7 @@ svg {
   h1.title {
     padding: 0 0 1vh;
     font-weight: 500;
-    font-size: 26px;
+    font-size: 30px;
   }
   h2 {
     line-height: 1.2;
@@ -206,7 +266,7 @@ svg {
   h1.title {
     padding: 0 0 1vh;
     font-weight: 500;
-    font-size: 26px;
+    font-size: 30px;
   }
   h2 {
     line-height: 1.2;
@@ -230,7 +290,7 @@ svg {
     font-size: 17px;
   }
   h1 {
-    font-size: 30px;
+    font-size: 36px;
     line-height: 1.2;
     padding: 1vh 0;
     font-weight: 700;
@@ -238,7 +298,7 @@ svg {
   h1.title {
     padding: 0 0 1vh;
     font-weight: 500;
-    font-size: 30px;
+    font-size: 36px;
   }
   h2 {
     line-height: 1.2;
@@ -262,7 +322,7 @@ svg {
     font-size: 18px;
   }
   h1 {
-    font-size: 30px;
+    font-size: 36px;
     line-height: 1.2;
     padding: 1.75vh 0;
     font-weight: 700;
@@ -270,7 +330,7 @@ svg {
   h1.title {
     padding: 0 0 1vh;
     font-weight: 500;
-    font-size: 36px;
+    font-size: 42px;
   }
   h2 {
     line-height: 1.2;
@@ -294,7 +354,7 @@ svg {
     font-size: 18px;
   }
   h1 {
-    font-size: 30px;
+    font-size: 36px;
     line-height: 1.2;
     padding: 1.75vh 0;
     font-weight: 700;
@@ -302,7 +362,7 @@ svg {
   h1.title {
     padding: 0 0 1vh;
     font-weight: 500;
-    font-size: 36px;
+    font-size: 42px;
   }
   h2 {
     line-height: 1.2;
@@ -326,7 +386,7 @@ svg {
     font-size: 20px;
   }
   h1 {
-    font-size: 30px;
+    font-size: 36px;
     line-height: 1.2;
     padding: 1.75vh 0;
     font-weight: 700;
@@ -334,7 +394,7 @@ svg {
   h1.title {
     padding: 0 0 1vh;
     font-weight: 500;
-    font-size: 36px;
+    font-size: 42px;
   }
   h2 {
     line-height: 1.2;
@@ -397,10 +457,6 @@ div.container.blog#first-content div.blog-title {
 div.container.blog#first-content div.blog-title.white * {
   color: white;
 }
-div.container.blog#first-content div.blog-title.white *::-moz-selection {
-  color: #353535 !important;
-  background: white !important;
-}
 div.container.blog#first-content div.blog-title.white *::selection {
   color: #353535 !important;
   background: white !important;
@@ -424,7 +480,7 @@ div.container.blog#first-content div.blog-title .blog-intro p.author {
   line-height: 1.2;
 }
 div.container.blog#first-content div.blog-title .blog-intro p.abstract {
-  font-family: "Poppins";
+  font-family: "Athletics";
   font-weight: 400;
   padding: 1vh 0;
 }
@@ -457,7 +513,7 @@ div.container.blog#first-content div.blog-title .blog-cover img.background {
 
 div.container.blog p.text {
   padding: 1.5vh 0;
-  font-family: "Charter", sans-serif;
+  font-family: "Tiempos Text", sans-serif;
 }
 div.container.blog p.text:last-child {
   padding-bottom: 0;
@@ -560,8 +616,7 @@ div.container.blog.gray-linear p.caption {
   }
   div.container.blog#first-content div.blog-title {
     grid-template-columns: 1fr 1fr;
-    -moz-column-gap: 2vw;
-         column-gap: 2vw;
+    column-gap: 2vw;
   }
   div.container.blog#first-content div.blog-title .blog-cover {
     margin: 0 0 0 auto;
@@ -624,8 +679,7 @@ div.container.blog.gray-linear p.caption {
   div.container.blog#first-content div.blog-title {
     grid-template-columns: 1fr 1fr;
     grid-row: 75vh;
-    -moz-column-gap: 3vw;
-         column-gap: 3vw;
+    column-gap: 3vw;
   }
   div.container.blog#first-content div.blog-title .blog-intro {
     display: flex;
@@ -674,8 +728,7 @@ div.container.blog.gray-linear p.caption {
   div.container.blog#first-content div.blog-title {
     grid-template-columns: 1fr 1fr;
     grid-row: 75vh;
-    -moz-column-gap: 4vw;
-         column-gap: 4vw;
+    column-gap: 4vw;
   }
   div.container.blog#first-content div.blog-title .blog-intro {
     padding: 5vh 0;
@@ -721,8 +774,7 @@ div.container.blog.gray-linear p.caption {
   div.container.blog#first-content div.blog-title {
     grid-template-columns: 1fr 1fr;
     grid-row: 75vh;
-    -moz-column-gap: 4vw;
-         column-gap: 4vw;
+    column-gap: 4vw;
   }
   div.container.blog#first-content div.blog-title .blog-intro {
     padding: 5vh 0;
@@ -765,8 +817,7 @@ div.container.blog.gray-linear p.caption {
   div.container.blog#first-content div.blog-title {
     grid-template-columns: 1fr 1fr;
     grid-row: 65vh;
-    -moz-column-gap: 5vw;
-         column-gap: 5vw;
+    column-gap: 5vw;
   }
   div.container.blog#first-content div.blog-title .blog-intro {
     padding: 5vh 0;
@@ -809,8 +860,7 @@ div.container.blog.gray-linear p.caption {
   div.container.blog#first-content div.blog-title {
     grid-template-columns: 1fr 1fr;
     grid-row: 65vh;
-    -moz-column-gap: 6vw;
-         column-gap: 6vw;
+    column-gap: 6vw;
   }
   div.container.blog#first-content div.blog-title .blog-intro {
     padding: 5vh 0;
@@ -853,8 +903,7 @@ div.container.blog.gray-linear p.caption {
   div.container.blog#first-content div.blog-title {
     grid-template-columns: 1fr 1fr;
     grid-row: 75vh;
-    -moz-column-gap: 7vw;
-         column-gap: 7vw;
+    column-gap: 7vw;
   }
   div.container.blog#first-content div.blog-title .blog-intro {
     padding: 5vh 0;
@@ -907,13 +956,11 @@ button, .button {
   justify-content: center;
   font-size: 0.7em;
   font-weight: 700;
-  font-family: "Poppins", sans-serif;
+  font-family: "Athletics", sans-serif;
   letter-spacing: 0.075em;
   text-decoration: none;
   text-transform: uppercase;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
 }
 input[type=submit]:hover, input[type=reset]:hover, input[type=button]:hover,
 button:hover, .button:hover {
@@ -966,15 +1013,11 @@ button.project.white, .button.project.white {
 }
 .slide-menu .dots {
   margin-bottom: -10px;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
 }
 .slide-menu .dots .dot {
   position: relative;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
   display: inline-block;
   background-color: #c6c6c6;
   cursor: pointer;
@@ -1017,7 +1060,7 @@ button.project.white, .button.project.white {
 table {
   margin: 0.5vh 0;
   width: 100%;
-  font-family: "Poppins", sans-serif;
+  font-family: "Athletics", sans-serif;
 }
 table a {
   font-size: inherit;
@@ -1128,13 +1171,11 @@ pre code {
   justify-content: center;
   font-size: 0.7em;
   font-weight: 700;
-  font-family: "Poppins", sans-serif;
+  font-family: "Athletics", sans-serif;
   letter-spacing: 0.075em;
   text-decoration: none;
   text-transform: uppercase;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
   border: none;
   z-index: 10;
   gap: 0;
@@ -1252,7 +1293,7 @@ select:after {
 .before figcaption,
 .after figcaption {
   font-size: 90%;
-  font-family: "Poppins";
+  font-family: "Athletics";
   background: transparent;
   color: #353535;
   padding: 8px;
@@ -1348,7 +1389,7 @@ h1, h2, h3, h4, h5, h6, p, a, code, pre, ol, ul, li {
   h1.title {
     font-weight: 400;
     letter-spacing: 0px;
-    font-size: 26px;
+    font-size: 30px;
   }
   h2 {
     line-height: 1.2;
@@ -1381,7 +1422,7 @@ h1, h2, h3, h4, h5, h6, p, a, code, pre, ol, ul, li {
     padding: 0 0 1vh;
     font-weight: 400;
     letter-spacing: 0px;
-    font-size: 26px;
+    font-size: 30px;
   }
   h2 {
     line-height: 1.2;
@@ -1411,7 +1452,7 @@ h1, h2, h3, h4, h5, h6, p, a, code, pre, ol, ul, li {
   }
   h1.title {
     padding: 0 0 1vh;
-    font-size: 26px;
+    font-size: 30px;
   }
   h2 {
     padding: 1vh 0;
@@ -1431,13 +1472,13 @@ h1, h2, h3, h4, h5, h6, p, a, code, pre, ol, ul, li {
     font-size: 18px;
   }
   h1 {
-    font-size: 26px;
+    font-size: 30px;
     line-height: 1.2;
     padding: 1vh 0;
   }
   h1.title {
     padding: 0 0 1vh;
-    font-size: 30px;
+    font-size: 36px;
   }
   h2 {
     padding: 1vh 0;
@@ -1457,13 +1498,13 @@ h1, h2, h3, h4, h5, h6, p, a, code, pre, ol, ul, li {
     font-size: 20px;
   }
   h1 {
-    font-size: 30px;
+    font-size: 36px;
     line-height: 1.2;
     padding: 1.75vh 0;
   }
   h1.title {
     padding: 0 0 1vh;
-    font-size: 36px;
+    font-size: 42px;
   }
   h2 {
     padding: 1.5vh 0;
@@ -1483,13 +1524,13 @@ h1, h2, h3, h4, h5, h6, p, a, code, pre, ol, ul, li {
     font-size: 20px;
   }
   h1 {
-    font-size: 30px;
+    font-size: 36px;
     line-height: 1.2;
     padding: 1.75vh 0;
   }
   h1.title {
     padding: 0 0 1vh;
-    font-size: 36px;
+    font-size: 42px;
   }
   h2 {
     padding: 1.5vh 0;
@@ -1509,13 +1550,13 @@ h1, h2, h3, h4, h5, h6, p, a, code, pre, ol, ul, li {
     font-size: 22px;
   }
   h1 {
-    font-size: 30px;
+    font-size: 36px;
     line-height: 1.2;
     padding: 1.75vh 0;
   }
   h1.title {
     padding: 0 0 1vh;
-    font-size: 36px;
+    font-size: 42px;
   }
   h2 {
     padding: 1.5vh 0;
@@ -1533,20 +1574,20 @@ h1, h2, h3, h4, h5, h6, p, a, code, pre, ol, ul, li {
   }
 }
 footer p {
-  font-family: "Charter";
+  font-family: "Tiempos Text";
 }
 
 /* ======================== Blog ===================== */
 div.container.blog#first-content div.blog-title .blog-intro p.author {
   padding: 4px 0 10px;
-  font-family: "Poppins";
+  font-family: "Athletics";
   font-style: italic;
   font-weight: 400;
   line-height: 1.2;
   font-size: 85%;
 }
 div.container.blog#first-content div.blog-title .blog-intro p.abstract {
-  font-family: "Poppins";
+  font-family: "Athletics";
   font-weight: 400;
   padding: 1vh 0;
   font-size: 85%;
@@ -1561,7 +1602,7 @@ div.container.blog#first-content div.blog-title .blog-intro .info p {
 
 div.container.blog p.text {
   padding: 1.5vh 0;
-  font-family: "Charter", sans-serif;
+  font-family: "Tiempos Text", sans-serif;
 }
 div.container.blog p.text:last-child {
   padding-bottom: 0;
@@ -1604,4 +1645,4 @@ select {
 .before figcaption,
 .after figcaption {
   font-size: 70%;
-}/*# sourceMappingURL=main_free.css.map */
+}
