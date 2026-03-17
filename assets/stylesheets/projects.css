@@ -1,7 +1,8 @@
 /* Projects page layout (Clarity-inspired) */
 
 .page-pad-top {
-  padding-top: 6rem;
+  /* nav is absolutely positioned, so pad more to avoid overlap */
+  padding-top: 7.5rem;
 }
 
 .projects-intro {
@@ -25,7 +26,8 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
+/* Match screenshot: 3 cards per row on desktop */
+@media screen and (min-width: 992px) {
   .projects-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -91,6 +93,13 @@
   grid-template-columns: 86px 1fr;
   gap: 1rem;
   align-items: start;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.pub-item:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
 }
 
 .pub-venue {
