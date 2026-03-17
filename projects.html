@@ -8,6 +8,7 @@
   <link rel="stylesheet" type="text/css" media="all" href="assets/stylesheets/main_free.css" />
   <link rel="stylesheet" type="text/css" media="all" href="clarity/clarity.css" />
   <link rel="stylesheet" type="text/css" media="all" href="assets/stylesheets/home.css" />
+  <link rel="stylesheet" type="text/css" media="all" href="assets/stylesheets/projects.css" />
   <link href="assets/fontawesome-free-7.2.0-web/css/all.min.css" rel="stylesheet">
 </head>
 <body>
@@ -25,9 +26,71 @@
     </div>
   </nav>
 
-  <div class="container blog main first" style="padding-top: 6rem;">
-    <h1>Projects</h1>
-    <p class="text">Add your projects here. You can link to clarity.html for project pages.</p>
+  <div class="container blog main first page-pad-top">
+    <div class="projects-intro">
+      <h1>Projects</h1>
+      <p class="text">
+        Here presents some representative projects (placeholder content for now).
+      </p>
+      <p class="text">
+        You can click a card to open a project page (for now, it points to <a href="clarity.html">clarity.html</a>).
+      </p>
+    </div>
+
+    <section class="projects-grid" aria-label="Project list">
+      <a class="project-card" href="clarity.html">
+        <div class="project-thumb placeholder" role="img" aria-label="Project thumbnail placeholder"></div>
+        <div>
+          <h3>Project One</h3>
+          <div class="project-meta">Short one-line description for testing.</div>
+        </div>
+      </a>
+
+      <a class="project-card" href="clarity.html">
+        <div class="project-thumb placeholder" role="img" aria-label="Project thumbnail placeholder"></div>
+        <div>
+          <h3>Project Two</h3>
+          <div class="project-meta">Another short description for testing.</div>
+        </div>
+      </a>
+
+      <a class="project-card" href="clarity.html">
+        <div class="project-thumb placeholder" role="img" aria-label="Project thumbnail placeholder"></div>
+        <div>
+          <h3>Project Three</h3>
+          <div class="project-meta">One more placeholder description.</div>
+        </div>
+      </a>
+    </section>
+
+    <div class="divider" role="separator" aria-hidden="true"></div>
+
+    <section class="pubs" aria-label="Publications">
+      <h2>Publications</h2>
+      <div class="pubs-list">
+        <div class="pub-item">
+          <div class="pub-venue">ICLR 2026</div>
+          <div class="pub-cite">
+            <b>Paper Title One</b><br>
+            Author A, Author B, Author C
+          </div>
+        </div>
+        <div class="pub-item">
+          <div class="pub-venue">NeurIPS 2025</div>
+          <div class="pub-cite">
+            <b>Paper Title Two</b><br>
+            Author A, Author B
+          </div>
+        </div>
+        <div class="pub-item">
+          <div class="pub-venue">CVPR 2024</div>
+          <div class="pub-cite">
+            <b>Paper Title Three</b><br>
+            Author A, Author B, Author C, Author D
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 
   <footer class="home-footer">
