@@ -2,72 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="refresh" content="0; url=projects/rex-omni/">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rex-Omni: Detect Anything via Next Point Prediction</title>
+  <title>Redirecting…</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="stylesheet" type="text/css" media="all" href="assets/stylesheets/main_free.css" />
-  <link rel="stylesheet" type="text/css" media="all" href="clarity/clarity.css" />
-  <link rel="stylesheet" type="text/css" media="all" href="assets/stylesheets/home.css" />
-  <link href="assets/fontawesome-free-7.2.0-web/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-  <nav class="home-nav">
-    <ul class="home-nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="projects.html" class="active">Projects</a></li>
-      <li><a href="resume.html">Résumé</a></li>
-      <li><a href="about.html">About</a></li>
-    </ul>
-    <div class="home-nav-social">
-      <a href="https://twitter.com" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-      <a href="mailto:your@email.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-      <a href="https://linkedin.com" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-    </div>
-  </nav>
-
-  <!-- Title block (Clarity-style) -->
-  <div class="container blog" id="first-content" style="background-color: #E0E4E6;">
-    <div class="blog-title no-cover">
-      <div class="blog-intro">
-        <div>
-          <h1 class="title">Detect Anything via Next Point Prediction</h1>
-          <p class="author">Qing Jiang, Junan Huo, Xingyu Chen, Yuda Xiong, Zhaoyang Zeng, Yihao Chen, Tianhe Ren, Junzhi Yu, Lei Zhang</p>
-          <p class="author" style="padding-top: 0;">International Digital Economy Academy (IDEA)</p>
-          <p class="abstract">
-            Object detection has long been dominated by traditional coordinate regression-based models, such as YOLO, DETR, and Grounding DINO. Although recent efforts have attempted to leverage MLLMs to tackle this task, they face challenges like low recall rate, duplicate predictions, coordinate misalignment, etc. In this work, we bridge this gap and propose <b>Rex-Omni</b>, a 3B-scale MLLM that achieves state-of-the-art object perception performance. On benchmarks like COCO and LVIS, Rex-Omni attains performance comparable to or exceeding regression-based models (e.g., DINO, Grounding DINO) in a zero-shot setting. This is enabled by three key designs: <b>1) Task Formulation</b>: we use special tokens to represent quantized coordinates from 0 to 999, reducing the model's learning difficulty and improving token efficiency for coordinate prediction; <b>2) Data Engines</b>: we construct multiple data engines to generate high-quality grounding, referring, and pointing data; <b>3) Training Pipelines</b>: we employ a two-stage training process, combining supervised fine-tuning on 22 million data with GRPO-based reinforcement post-training. Beyond conventional detection, Rex-Omni's inherent language understanding enables versatile capabilities such as object referring, pointing, visual prompting, GUI grounding, spatial referring, OCR and key-pointing, all systematically evaluated on dedicated benchmarks.
-          </p>
-          <div class="info">
-            <div>
-              <a href="https://arxiv.org/abs/2510.12798" class="button icon" style="background-color: rgba(255, 255, 255, 0.2);">Paper <i class="fa-regular fa-file-lines"></i></a> &nbsp;&nbsp;
-              <a href="https://github.com/IDEA-Research/Rex-Omni" class="button icon" style="background-color: rgba(255, 255, 255, 0.2);">Code <i class="fa-solid fa-code"></i></a> &nbsp;&nbsp;
-              <a href="https://rex-omni.github.io/" class="button icon" style="background-color: rgba(255, 255, 255, 0.2);">Project <i class="fa-solid fa-external-link"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="container blog main first" id="blog-main" style="padding-top: 4rem;">
-    <h1>Overview</h1>
-    <p class="text">
-      We argue that the performance disparity in MLLM-based object detection primarily arises from two fundamental challenges: (1) MLLMs typically treat coordinate prediction as a discrete classification task, facing significant learning difficulty in mapping discrete tokens to continuous pixel space; (2) teacher-forced SFT creates a mismatch between training and inference, leading to duplicate predictions and coordinate drift during free-form generation.
-    </p>
-    <p class="text">
-      To overcome these limitations, Rex-Omni adopts three core design principles:
-    </p>
-    <ul class="text">
-      <li><b>Task Formulation</b>: We unify visual perception tasks under a coordinate prediction framework with quantized coordinates (0–999). Pointing predicts one point; detection uses two points for a box; polygons use four or more points; keypoint tasks output multiple semantic points.</li>
-      <li><b>Data Engines</b>: We design multiple specialized data engines for grounding, referring, and pointing tasks to provide high-quality, semantically rich supervision for the discrete-to-continuous mapping.</li>
-      <li><b>Training Pipelines</b>: We use a two-stage paradigm: SFT on 22M data, then GRPO-based reinforcement post-training with geometry-aware rewards to improve coordinate precision and mitigate duplicate predictions.</li>
-    </ul>
-    <p class="text">
-      Rex-Omni is evaluated on COCO, LVIS, and diverse tasks (long-tailed detection, referring comprehension, GUI grounding, OCR, etc.), consistently outperforming both traditional detectors and MLLMs and establishing a unified framework that combines precise localization with robust language understanding.
-    </p>
-  </div>
-
-  <footer class="home-footer">
-    <a href="https://github.com/lorenmt/clarity-template">&lt;/&gt;</a> with ❤️ by Shikun
-  </footer>
+  <p>If you are not redirected automatically, open <a href="projects/rex-omni/">projects/rex-omni/</a>.</p>
 </body>
 </html>

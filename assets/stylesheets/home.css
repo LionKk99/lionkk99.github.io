@@ -39,6 +39,7 @@
   font-family: "Poppins", sans-serif;
   font-size: 15px;
   font-weight: 500;
+  position: relative;
 }
 
 .home-nav-links a {
@@ -52,16 +53,18 @@
   color: #353535;
 }
 
-.home-nav-links a.active::after {
-  content: "";
+/* Moving indicator dot (controlled by JS) */
+.home-nav-indicator {
   position: absolute;
-  left: 50%;
   bottom: -4px;
-  transform: translateX(-50%);
+  left: 0;
   width: 6px;
   height: 6px;
   border-radius: 50%;
   background: #c0392b;
+  transform: translateX(-9999px);
+  transition: transform 180ms ease;
+  pointer-events: none;
 }
 
 .home-nav-social {
