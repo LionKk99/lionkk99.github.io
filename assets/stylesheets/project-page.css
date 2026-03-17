@@ -1,0 +1,35 @@
+/* Project detail pages (under /projects/*/) */
+
+/* Make cover a portrait rectangle and scale ~0.8x of text column */
+div.container.blog#first-content div.blog-title .blog-cover.project-portrait {
+  justify-content: center;
+}
+
+div.container.blog#first-content div.blog-title .blog-cover.project-portrait img.foreground {
+  width: 80%;
+  max-width: 420px;
+  aspect-ratio: 3 / 4;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.12);
+}
+
+div.container.blog#first-content div.blog-title .blog-cover.project-portrait img.background {
+  width: 80%;
+  max-width: 420px;
+  aspect-ratio: 3 / 4;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  filter: blur(28px);
+  opacity: 0.9;
+}
+
+@media screen and (max-width: 992px) {
+  div.container.blog#first-content div.blog-title .blog-cover.project-portrait img.foreground,
+  div.container.blog#first-content div.blog-title .blog-cover.project-portrait img.background {
+    width: min(78vw, 420px);
+  }
+}
+
