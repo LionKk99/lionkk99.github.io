@@ -1,7 +1,8 @@
 /* About page: Clarity-like sectioned layout */
 
 .about-page {
-  padding-top: 6.5rem; /* keep clear of absolute nav */
+  /* keep clear of absolute nav (nav height can change due to wrapping) */
+  padding-top: calc(clamp(7.5rem, 10vh, 10.5rem) + env(safe-area-inset-top));
   padding-bottom: 2.5rem;
 }
 

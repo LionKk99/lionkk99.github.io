@@ -2,7 +2,7 @@
 
 .page-pad-top {
   /* nav is absolutely positioned, so pad more to avoid overlap */
-  padding-top: 7.5rem;
+  padding-top: calc(clamp(7.5rem, 10vh, 10.5rem) + env(safe-area-inset-top));
 }
 
 .projects-intro {
