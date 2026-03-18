@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SWGZ: Guangzhou Architecture Expo Mini Program</title>
+  <link rel="icon" type="image/x-icon" sizes="16x16" href="../../favicon16.ico">
+  <link rel="icon" type="image/x-icon" sizes="32x32" href="../../favicon32.ico">
+  <link rel="stylesheet" type="text/css" media="all" href="../../assets/stylesheets/main_free.css" />
+  <link rel="stylesheet" type="text/css" media="all" href="../../clarity/clarity.css" />
+  <link rel="stylesheet" type="text/css" media="all" href="../../assets/stylesheets/home.css" />
+  <link rel="stylesheet" type="text/css" media="all" href="../../assets/stylesheets/project-page.css" />
+  <link href="../../assets/fontawesome-free-7.2.0-web/css/all.min.css" rel="stylesheet">
+  <script defer src="../../assets/scripts/nav-indicator.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.9.4/lib/p5.min.js"></script>
+</head>
+<body>
+  <nav class="home-nav">
+    <ul class="home-nav-links">
+      <li><a href="../../index.html">Home</a></li>
+      <li><a href="../../projects.html" class="active">Projects</a></li>
+      <li><a href="../../resume.html">Resume</a></li>
+      <li><a href="../../about.html">About</a></li>
+    </ul>
+    <div class="home-nav-social">
+      <a href="https://twitter.com" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="mailto:your@email.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      <a href="https://linkedin.com" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+    </div>
+  </nav>
+
+  <div class="container blog" id="first-content" style="background:
+      radial-gradient(circle at 50% 50%, #9BD4E5 0%, #5FA9D4 80%),
+      linear-gradient(120deg, #A8D5A2 0%, #D6EAC7 50%, transparent 100%),
+      linear-gradient(200deg, #F8C7D8 15%, #E1C4F4 40%, transparent 80%),
+      linear-gradient(45deg, #FFF4D6 0%, #FCEABB 30%, transparent 70%);
+    background-blend-mode: overlay, lighten, screen, normal;">
+    <div class="blog-title">
+      <div class="blog-intro">
+        <div>
+          <h1 class="title">SWGZ</h1>
+          <p class="author">A mini program for Guangzhou Architecture Expo visitors</p>
+          <p class="author" style="padding-top: 0;">Open-source on GitHub</p>
+          <p class="abstract">
+            A WeChat mini program designed for visitors of a Guangzhou architecture exhibition.
+            It helps users explore the cultural background of local landmark buildings and provides interactive AI features.
+          </p>
+          <div class="info">
+            <div>
+              <a href="https://github.com/LionKk99/SWGZ" class="button icon" style="background-color: rgba(255, 255, 255, 0.2);" target="_blank" rel="noopener noreferrer">
+                GitHub <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="blog-cover project-portrait" id="cover-shell">
+        <div id="desktop-cover">
+          <script src="cover/swgz_cover.js"></script>
+        </div>
+        <div id="mobile-cover">
+          <img class="foreground" src="../../assets/ai_pics/crayonThumbnail19@2x.png" alt="SWGZ cover">
+          <img class="background" src="../../assets/ai_pics/crayonThumbnail19@2x.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container blog main first" id="blog-main">
+    <h1>Key Features</h1>
+    <ul class="text">
+      <li><b>Illustration-style map</b>: visually presents featured buildings and their locations.</li>
+      <li><b>AI image recognition</b>: take a photo to identify a building and view details.</li>
+      <li><b>AI Q&amp;A</b>: ask questions about Guangzhou architecture on demand.</li>
+      <li><b>AI poster</b>: generate a personalized commemorative poster.</li>
+    </ul>
+
+    <h1>Screenshots</h1>
+    <p class="text">
+      Screenshots are available in the repository README:
+      <a href="https://github.com/LionKk99/SWGZ#swgz" target="_blank" rel="noopener noreferrer">SWGZ README</a>.
+    </p>
+  </div>
+
+  <footer class="home-footer">
+    <a href="https://github.com/lorenmt/clarity-template">&lt;/&gt;</a> with ❤️ by Shikun
+  </footer>
+
+  <style>
+    #cover-shell {
+      position: relative;
+      overflow: hidden;
+    }
+
+    #desktop-cover {
+      display: none;
+      width: 100%;
+      height: 100%;
+    }
+
+    #mobile-cover {
+      position: absolute;
+      inset: 0;
+      display: block;
+    }
+
+    @media (min-width: 1200px) {
+      #desktop-cover {
+        display: block;
+      }
+
+      #mobile-cover {
+        display: none;
+      }
+    }
+  </style>
+</body>
+</html>
+
