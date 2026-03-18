@@ -6,6 +6,11 @@
   padding-bottom: 2.5rem;
 }
 
+/* If nav becomes sticky (in flow), the large top padding is unnecessary. */
+body.with-sticky-nav .about-page {
+  padding-top: 2.25rem;
+}
+
 .about-title {
   margin-bottom: 1.5rem;
 }

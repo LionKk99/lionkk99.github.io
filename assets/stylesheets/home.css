@@ -10,6 +10,20 @@
   padding-top: calc(var(--nav-h, 96px) + 1.25rem + env(safe-area-inset-top));
 }
 
+/* On non-home pages we keep nav in normal flow to avoid overlap under zoom/wrapping. */
+body.with-sticky-nav .home-nav {
+  position: sticky;
+  top: 0;
+  background: rgba(255, 255, 255, 0.86);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* When nav is sticky (in flow), remove the extra top padding helpers. */
+body.with-sticky-nav .page-pad-top {
+  padding-top: 2.25rem;
+}
+
 .home-nav {
   display: flex;
   justify-content: space-between;
