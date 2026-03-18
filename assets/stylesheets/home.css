@@ -1,6 +1,15 @@
 /* Homepage: nav, hero (intro + image), footer */
 
 /* ----- Navigation ----- */
+:root {
+  /* Updated by assets/scripts/nav-offset.js at runtime */
+  --nav-h: 96px;
+}
+
+.page-pad-top {
+  padding-top: calc(var(--nav-h, 96px) + 1.25rem + env(safe-area-inset-top));
+}
+
 .home-nav {
   display: flex;
   justify-content: space-between;
