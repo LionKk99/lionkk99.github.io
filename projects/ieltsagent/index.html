@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IELTSagent: IELTS Writing + Image Word Cards</title>
+  <link rel="icon" type="image/x-icon" sizes="16x16" href="../../favicon16.ico">
+  <link rel="icon" type="image/x-icon" sizes="32x32" href="../../favicon32.ico">
+  <link rel="stylesheet" type="text/css" media="all" href="../../assets/stylesheets/main_free.css" />
+  <link rel="stylesheet" type="text/css" media="all" href="../../clarity/clarity.css" />
+  <link rel="stylesheet" type="text/css" media="all" href="../../assets/stylesheets/home.css" />
+  <link rel="stylesheet" type="text/css" media="all" href="../../assets/stylesheets/project-page.css" />
+  <link href="../../assets/fontawesome-free-7.2.0-web/css/all.min.css" rel="stylesheet">
+  <script defer src="../../assets/scripts/nav-indicator.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.9.4/lib/p5.min.js"></script>
+</head>
+<body>
+  <nav class="home-nav">
+    <ul class="home-nav-links">
+      <li><a href="../../index.html">Home</a></li>
+      <li><a href="../../projects.html" class="active">Projects</a></li>
+      <li><a href="../../resume.html">Resume</a></li>
+      <li><a href="../../about.html">About</a></li>
+    </ul>
+    <div class="home-nav-social">
+      <a href="https://twitter.com" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="mailto:your@email.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      <a href="https://linkedin.com" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+    </div>
+  </nav>
+
+  <div class="container blog" id="first-content" style="background:
+      radial-gradient(circle at 50% 50%, #9BD4E5 0%, #5FA9D4 80%),
+      linear-gradient(120deg, #A8D5A2 0%, #D6EAC7 50%, transparent 100%),
+      linear-gradient(200deg, #F8C7D8 15%, #E1C4F4 40%, transparent 80%),
+      linear-gradient(45deg, #FFF4D6 0%, #FCEABB 30%, transparent 70%);
+    background-blend-mode: overlay, lighten, screen, normal;">
+    <div class="blog-title">
+      <div class="blog-intro">
+        <div>
+          <h1 class="title">IELTSagent</h1>
+          <p class="author">Local-first IELTS writing coach + image-based word cards</p>
+          <p class="author" style="padding-top: 0;">Open-source on GitHub</p>
+          <p class="abstract">
+            A local-run English learning project with two parallel modules:
+            (1) IELTS Writing assistant (Task 1 / Task 2) with scoring, error analysis, improvement suggestions and revised essays;
+            (2) Image word-card learning: segment targets from images, auto-name in English, translate to Chinese, and archive cards.
+          </p>
+          <div class="info">
+            <div>
+              <a href="https://github.com/LionKk99/IELTSagent" class="button icon" style="background-color: rgba(255, 255, 255, 0.2);" target="_blank" rel="noopener noreferrer">
+                GitHub <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="blog-cover project-portrait" id="cover-shell">
+        <div id="desktop-cover">
+          <script src="cover/ieltsagent_cover.js"></script>
+        </div>
+        <div id="mobile-cover">
+          <img class="foreground" src="../../assets/ai_pics/crayonThumbnail24@2x.png" alt="IELTSagent cover">
+          <img class="background" src="../../assets/ai_pics/crayonThumbnail24@2x.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container blog main first" id="blog-main">
+    <h1>Features</h1>
+    <ul class="text">
+      <li>IELTS Writing (Task 1 / Task 2): rubric scoring, error analysis, improvement suggestions, revised samples.</li>
+      <li>RAG-based few-shot retrieval to provide grounded feedback.</li>
+      <li>Optional Obsidian sync for saving scoring records and metadata.</li>
+      <li>Image word cards: point/box interactive segmentation, auto English naming, Chinese translation.</li>
+      <li>Dictionary IPA/pronunciation/examples (fallback to Qwen examples when missing).</li>
+      <li>Word-card CRUD (view / edit / delete) and dark/light theme.</li>
+    </ul>
+
+    <h1>Local Run (Quick Start)</h1>
+    <p class="text">
+      Install dependencies:
+    </p>
+    <pre><code class="plaintext">pip install -r requirements.txt</code></pre>
+    <p class="text">
+      Copy <code>.env.template</code> to <code>.env</code> and fill your keys (e.g. Qwen API Key, HF Token). Then initialize data/indexes:
+    </p>
+    <pre><code class="plaintext">python scripts/setup_data_and_indexes.py</code></pre>
+    <p class="text">
+      Start the server:
+    </p>
+    <pre><code class="plaintext">python app.py</code></pre>
+    <p class="text">
+      Open:
+      <code>http://127.0.0.1:5000/</code> (home) and <code>http://127.0.0.1:5000/word-learning</code> (word learning).
+    </p>
+  </div>
+
+  <footer class="home-footer">
+    <a href="https://github.com/lorenmt/clarity-template">&lt;/&gt;</a> with ❤️ by Shikun
+  </footer>
+
+  <style>
+    #cover-shell {
+      position: relative;
+      overflow: hidden;
+    }
+
+    #desktop-cover {
+      display: none;
+      width: 100%;
+      height: 100%;
+    }
+
+    #mobile-cover {
+      position: absolute;
+      inset: 0;
+      display: block;
+    }
+
+    @media (min-width: 1200px) {
+      #desktop-cover {
+        display: block;
+      }
+
+      #mobile-cover {
+        display: none;
+      }
+    }
+  </style>
+</body>
+</html>
+
