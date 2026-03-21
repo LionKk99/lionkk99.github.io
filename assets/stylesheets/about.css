@@ -56,6 +56,24 @@ body.with-sticky-nav .about-page {
   margin-top: 0;
 }
 
+/* Inline project pills (Clarity-style), same pattern as shikun.io about page */
+.about-content a.button.project.inline {
+  display: inline-flex;
+  vertical-align: middle;
+  margin: 0 0.2em 0.15em 0;
+  text-decoration: none;
+}
+
+.about-content a.button.project.inline:hover {
+  opacity: 0.9;
+  color: inherit;
+}
+
+.about-content a.button.project.white.inline:hover {
+  color: #f4f3ef !important;
+  opacity: 0.9;
+}
+
 @media screen and (max-width: 769px) {
   .about-section {
     grid-template-columns: 1fr;

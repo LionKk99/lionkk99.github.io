@@ -1,14 +1,21 @@
-// Desktop-only: prevent WEBGL workload on small screens.
-// Interface note:
-// - This script depends on p5.js global lifecycle hooks (preload/setup/draw).
-// - It expects a container element with id="desktop-cover".
-// - Main external input is IMG_URL (source image for color sampling).
-const isDesktop = window.innerWidth >= 1200;
+/**
+ * p5.js WEBGL “Kaleido-style” project cover.
+ * Configure per page: set data-cover-src on #desktop-cover (absolute URL path to image).
+ */
+(function () {
+  const isDesktop = window.innerWidth >= 1200;
 
-// Input: replace this path to generate a different color/style baseline.
-const IMG_URL = "/assets/ai_pics/crayonThumbnail19@2x.png";
+  function getImageUrl() {
+    const el = document.getElementById("desktop-cover");
+    const url = el && el.getAttribute("data-cover-src");
+    return url && url.trim() ? url.trim() : "";
+  }
 
-if (isDesktop) {
+  if (!isDesktop) return;
+
+  const IMG_URL = getImageUrl();
+  if (!IMG_URL) return;
+
   let img;
   let rotationX = 0;
   let rotationY = 0;
@@ -20,7 +27,6 @@ if (isDesktop) {
   const waveFrequency = 0.5;
   const waveSpeed = 1.7;
   const maxRotation = 90;
-
   let cubeData = [];
 
   window.preload = function () {
@@ -29,6 +35,7 @@ if (isDesktop) {
 
   window.setup = function () {
     const container = document.getElementById("desktop-cover");
+    if (!container) return;
     const containerWidth = container.offsetWidth || 900;
     const containerHeight = (containerWidth / 3) * 4;
     const cnv = createCanvas(containerWidth, containerHeight, WEBGL);
@@ -58,7 +65,6 @@ if (isDesktop) {
           const sampleX = constrain(x + density / 2, 0, img.width - 1);
           const sampleY = constrain(y + density / 2, 0, img.height - 1);
           const pixelColor = getColorFromPixels(sampleX, sampleY);
-
           cubeData.push({
             x: x + density / 2,
             y: y + density / 2,
@@ -77,7 +83,6 @@ if (isDesktop) {
               const sampleX = constrain(centerX, 0, img.width - 1);
               const sampleY = constrain(centerY, 0, img.height - 1);
               const pixelColor = getColorFromPixels(sampleX, sampleY);
-
               cubeData.push({
                 x: centerX,
                 y: centerY,
@@ -100,7 +105,8 @@ if (isDesktop) {
     translate(-img.width / 2, -img.height / 2);
 
     for (const cube of cubeData) {
-      const angle = sin(cube.x * waveFrequency + cube.y * waveFrequency + frameCount * waveSpeed) * maxRotation;
+      const angle =
+        sin(cube.x * waveFrequency + cube.y * waveFrequency + frameCount * waveSpeed) * maxRotation;
       push();
       translate(cube.x, cube.y, 0);
       rotateX(angle);
@@ -164,5 +170,4 @@ if (isDesktop) {
     }
     return sumSquaredDiff / brightnesses.length;
   }
-}
-
+})();
