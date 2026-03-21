@@ -12,6 +12,7 @@
   <link rel="stylesheet" type="text/css" media="all" href="../../assets/stylesheets/project-page.css" />
   <link href="../../assets/fontawesome-free-7.2.0-web/css/all.min.css" rel="stylesheet">
   <script defer src="../../assets/scripts/nav-indicator.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.9.4/lib/p5.min.js"></script>
 </head>
 <body>
   <nav class="home-nav">
@@ -28,7 +29,12 @@
     </div>
   </nav>
 
-  <div class="container blog" id="first-content" style="background-color: #E0E4E6;">
+  <div class="container blog" id="first-content" style="background:
+      radial-gradient(circle at 50% 50%, #9BD4E5 0%, #5FA9D4 80%),
+      linear-gradient(120deg, #A8D5A2 0%, #D6EAC7 50%, transparent 100%),
+      linear-gradient(200deg, #F8C7D8 15%, #E1C4F4 40%, transparent 80%),
+      linear-gradient(45deg, #FFF4D6 0%, #FCEABB 30%, transparent 70%);
+    background-blend-mode: overlay, lighten, screen, normal;">
     <div class="blog-title">
       <div class="blog-intro">
         <div>
@@ -48,9 +54,14 @@
         </div>
       </div>
 
-      <div class="blog-cover project-portrait">
-        <img class="foreground" src="../../assets/ai_pics/crayonThumbnail16@2x.png" alt="Rex-Omni teaser">
-        <img class="background" src="../../assets/ai_pics/crayonThumbnail16@2x.png" alt="">
+      <div class="blog-cover project-portrait" id="cover-shell">
+        <div id="desktop-cover" data-cover-src="/assets/ai_pics/crayonThumbnail16@2x.png">
+          <script src="../../assets/scripts/cover.js"></script>
+        </div>
+        <div id="mobile-cover">
+          <img class="foreground" src="../../assets/ai_pics/crayonThumbnail16@2x.png" alt="Rex-Omni teaser">
+          <img class="background" src="../../assets/ai_pics/crayonThumbnail16@2x.png" alt="">
+        </div>
       </div>
     </div>
   </div>
@@ -68,6 +79,35 @@
   <footer class="home-footer">
     <a href="https://github.com/lorenmt/clarity-template">&lt;/&gt;</a> with ❤️ by Shikun
   </footer>
+
+  <style>
+    #cover-shell {
+      position: relative;
+      overflow: hidden;
+    }
+
+    #desktop-cover {
+      display: none;
+      width: 100%;
+      height: 100%;
+    }
+
+    #mobile-cover {
+      position: absolute;
+      inset: 0;
+      display: block;
+    }
+
+    @media (min-width: 1200px) {
+      #desktop-cover {
+        display: block;
+      }
+
+      #mobile-cover {
+        display: none;
+      }
+    }
+  </style>
 </body>
 </html>
 
